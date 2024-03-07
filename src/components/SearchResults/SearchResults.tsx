@@ -10,7 +10,7 @@ export function SearchResults() {
   return (
     <div className="usersList">
       {users.map((user) => (
-        <UserCard {...user} />
+        <UserCard  key={user.id} {...user} />
       ))}
     </div>
   );

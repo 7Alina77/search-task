@@ -1,12 +1,21 @@
 import "./style.css";
 
-export function UserCard(props) {
+interface UserCardProps {
+  id: number,
+  first_name: string;
+  last_name: string;
+  avatar: string;
+  email: string;
+}
+
+export function UserCard(props: UserCardProps) {
+  
   return (
     <div className="userCard">
-      <img className="userPic" src={props.image} />
+      <img className="userPic" src={props.avatar} />
       <div className="userInfo">
-        <div>{`${props.firstName} ${props.lastName}`}</div>
-        <div>{props.address.city}</div>
+        <div>{`${props.first_name} ${props.last_name}`}</div>
+        <div>{props.email}</div>
       </div>
     </div>
   );
